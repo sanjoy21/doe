@@ -21,4 +21,8 @@ jobs:
         port: 21098 # Standard cPanel SSH port (check with your host)
         script: |
           cd /home/sanjnxpu/doe
+          if [ ! -d ".git" ]; then
+          git clone https://github.com/sanjoy21/doe.git .
+          else
           git pull origin main
+          fi
