@@ -1,0 +1,16 @@
+Dear CONTACTNAME,
+Emergency Skills, Inc (ESI) the DOE contracted Automated External Defibrillator (AED) vendor, will be visiting your building during the week of DATES to service the AEDs in the building and ensure all AEDs are ready for use in a medical emergency.
+
+Additionally, a modified code blue drill will be conducted. Please note: all available CPR/AED certified responders should respond to the drill; however, they will not be required to perform the CPR/AED skills on the manikin at this time. The ESI Field Rep will instead review the CPR/AED skills with the response team. While adapted, the drill will be a valuable experience for the responders.
+
+Your ESI Field Representative is TRAINERNAME
+
+Please <a href='https://doe.emergencyskills.com/acknowledgedrill.php?QUERYSTRING'>click here</a> to acknowledge the AED Inspection next week.
+
+If you have any questions or concerns, please feel free to email me at sherry@emergencyskills.com.
+
+Thank you for assistance with this life saving project!
+
+Sherry Fusco
+Senior Project Manager
+Emergency Skills, Inc

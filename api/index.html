@@ -1,0 +1,133 @@
+<h2>Emergency Skills API Instructions</h2>
+Call: <b>http://doe.emergencyskills.com/api/api.php</b><br>
+Method: <b>POST</b><br>
+Returns: <b>JSON</b><br>
+
+Possible Methods: <a href='#doLogin'>doLogin</a> <a href='#getSchools'>getSchools</a> <a href='#downloadData'>downloadData</a>
+<br>
+<!-- do login starts -->
+<hr>
+
+<a name='doLogin'></a>
+<h3>Method: <i>doLogin</i></h3>
+<b>Arguments:</b> <br>
+&nbsp; &nbsp; username (string)<br>
+&nbsp; &nbsp; password (string)<br>
+<br>
+<b>Returns:</b> <br>
+&nbsp; &nbsp; status: "error" or "success"<br>
+&nbsp; &nbsp; userid: integer (if successful)<br>
+&nbsp; &nbsp; attributes: array of values (if successful)<br>
+&nbsp; &nbsp; error_message: string (if error)<br>
+<br>
+
+Sample Curl Code (PHP): <br>
+<textarea cols=100 rows='20'>
+$post = array( 
+    'apikey' => '123456', // just an example
+    'method' => "doLogin", 
+    'username' => 'user1',
+    'password' => 'passuser1',
+);
+
+$ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "Status: " . $value->status . "<br>" );
+echo( "Error Message: " . $value->error_message . "<br>" );
+echo( "User ID: " . $value->userid . "<br>" );
+echo( "Attributes: " . print_r( $value->attrs, true ) . "<br>" );
+
+</textarea>
+
+<!-- do login ends -->
+
+
+
+<!-- getschools starts -->
+<hr>
+
+<a name='getSchools'></a>
+<h3>Method: <i>getSchools</i></h3>
+<b>Arguments:</b> <br>
+&nbsp; &nbsp; userid (integer)<br>
+&nbsp; &nbsp; zipcode (string, optional)<br>
+<br>
+<b>Returns:</b> <br>
+&nbsp; &nbsp; status: "error" or "success"<br>
+&nbsp; &nbsp; schools: array of values (if successful)<br>
+<br>
+
+Sample Curl Code (PHP): <br>
+<textarea cols=100 rows='20'>
+$post = array( 
+    'apikey' => '123456', // just an example
+    'method' => "getSchools", 
+    'zipcode' => "11215", 
+    'userid' => 1
+);
+
+$ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "Status: " . $value->status . "<br>" );
+echo( "Schools: " . print_r( $value->schools, true ) . "<br>" );
+
+</textarea>
+
+<!-- get schools ends -->
+
+
+
+<!-- getschools starts -->
+<hr>
+
+<a name='downloadData'></a>
+<h3>Method: <i>downloadData</i></h3>
+<b>Arguments:</b> <br>
+&nbsp; &nbsp; schoolid (integer)<br>
+<br>
+<b>Returns:</b> <br>
+&nbsp; &nbsp; status: "error" or "success"<br>
+&nbsp; &nbsp; drill: array of values (if successful)<br>
+&nbsp; &nbsp; newinstall: array of values (if successful)<br>
+&nbsp; &nbsp; servicecall: array of values (if successful)<br>
+<br>
+
+Sample Curl Code (PHP): <br>
+<textarea cols=100 rows='20'>
+$post = array( 
+    'apikey' => '123456', // just an example
+    'method' => "downloadData", 
+    'schoolid' => "988"
+);
+
+$ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "Status: " . $value->status . "<br>" );
+echo( "Drill: " . print_r( $value->drill, true ) . "<br>" );
+echo( "New Install: " . print_r( $value->newinstall, true ) . "<br>" );
+echo( "Service Call: " . print_r( $value->servicecall, true ) . "<br>" );
+
+</textarea>
+
+<!-- downloadData ends -->
+
+
+

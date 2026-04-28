@@ -1,0 +1,135 @@
+<?
+include "mysql.php";
+
+if( $id )
+{
+session_unregister( "session_classname" );
+$session_classname = $id;
+session_register( "session_classname" );
+}
+if( $name )
+{
+$sql = ( "update classes set name = '$name', priority = '$priority', description = '$description', footer = '$footer', detailedname = '$detailedname', content = '$content', who = '$who' where id = $session_classname" ) ;
+mysql_query($sql) or die( mysql_error() );
+}
+
+$result = mysql_query( "select * from classes where id = '$session_classname' " );
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Emergency Skills Inc. -- Optimize Your Response Time</title>
+
+<META NAME="Keywords" CONTENT="CPR, CPR Classes, AED, AED training, AED Sales, Defib Sales, Defibrillator, Defibrillators, Defibrillation, Defib, Automatic External Defibrillator, Automatic External Defibrillator, Emergency Skills, Emergency Services, New York, New York City, NYC, NY, emergency, emergencies, urgent, 911, help, cardiac arrest, heart attack, stroke, public defibrillation, public access defibrillator, defib vendor, defib sales, defib training, Cardio Pulmonary Recussitation, Recussitate, Heimlich, Heimlich manuever, choking, pocket mask, ventilation, rescue breathing, manikin, manakin">
+
+<META NAME="Description" CONTENT="EMERGENCY SKILLS, Inc., a corporate safety training company, provides AED sales and CPR training the New York City metro area.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!---------- JavaScript begins...
+function ChangeImage (ImageName,FileName) 
+{
+	document[ImageName].src = FileName;
+}
+// JavaScript ends ---------->
+</SCRIPT>	
+
+
+<STYLE TYPE="text/css">
+<!--
+BODY {margin:0}
+-->
+</STYLE>	
+
+
+<STYLE TYPE="text/css">
+a:link { color: #330099; text-decoration: none }
+a:active { color: #330099; text-decoration: none }
+a:visited { color: #330099; text-decoration: none }
+a:hover { color: #330099; text-decoration: none }
+</STYLE> 
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+
+
+<body bgcolor="#000066" marginwidth="0" marginheight="0" link="blue" visited="blue">
+
+<br>
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" width="700">
+	<tr>
+		<td colspan="4" valign="top"><img src="images/topbanner.jpg" width="700" height="84"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" background="images/topnav_background.jpg" width="700" height="24">
+        <div align="right">		
+        <? include "ssi/topnav.php"; ?>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">		
+		<? include "ssi/leftnav.php"; ?>
+		</td>
+		<td valign="top" width="5"><img src="images/dotclear.gif" width="10"></td>
+		<td valign="top" width="476"><br><span class="copy">
+		
+		<!--begin center content-->
+		
+		
+		<table cellpadding="5" cellspacing="1" border="0" width="465">
+			<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><strong><a href="http://doe.emergencyskills.com/adminmain.php">&laquo; Back to Admin Main</a><br>
+<a href='editclasses.php'>&laquo; Back to Editing Classes</a>
+</strong></span></td>				
+
+			</tr>
+			<!--<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><div align="right">* indicates required fields</div></span></td>				
+			</tr>-->
+		</table>
+		<p>
+		
+		<table cellpadding="5" cellspacing="1" border="0">
+			<tr>
+<? $row = mysql_fetch_array( $result ) ; ?>
+<form method='post'>	<td valign="top"><span class="copy">
+<strong>Edit class info for <?=$row["name"]?></strong><br><br>
+<table><tr><td>
+
+<table cellpadding="3">
+<tr><td><span class="copy">Detailed Name:</td><td> <input type='text' name='detailedname' size='45'  value="<?=$row["detailedname"]?>"></td></tr>
+<tr><td><span class="copy">Short Name:</td><td> <input type='text' name='name' size='30' value="<?=$row["name"]?>"></td></tr>
+<tr><td><span class="copy">Priority: </td><td><input type='text' name='priority' size='3' value="<?=$row["priority"]?>"></td></tr>
+<tr><td><span class="copy">Content:</td><td> <input type='text' name='content' size='45'  value="<?=$row["content"]?>"></td></tr>
+<tr><td><span class="copy">Who:</td><td> <input type='text' name='who' size='45'  value="<?=$row["who"]?>"></td></tr>
+<tr><td><span class="copy">Class Description:</td><td> <textarea name='description'  cols='40' rows='5'><?=$row["description"]?></textarea></td></tr>
+<tr><td><span class="copy">Successful Completion:</td><td> <textarea name='footer' rows='3' cols='40'><?=$row["footer"]?></textarea></td></tr>
+
+
+</table>
+<input type="submit" value="Update" style="font-size: 10px;  font-family: verdana;"><br>
+
+</td>			
+			</tr>
+		</table>
+		
+		
+		<br>
+        <br>
+
+		
+		</span>
+		</td>
+		<td valign="top" width="15"><img src="images/dotclear.gif" width="10"></td>
+	</tr>
+</table>
+<br><br>
+</div>
+
+</body>
+</html>

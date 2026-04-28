@@ -1,0 +1,30 @@
+<?
+
+$apikey = "daMEs26rufAqasw2pUYU";
+$post = array( 
+    'method' => "uploadNewInstall", 
+    'apikey' => $apikey, 
+    "data" => "{\"address\":\"512 Carroll Street Brooklyn New York 11215\",\"principal\":\"Arthur Mattia, I.A. amattia@schools.nyc.gov\",\"contact\":\"Arthur Mattia amattia@schools.nyc.gov 718-624-5271\",\"code\":\"75-K-372\",\"installid\":\"10748\",\"status\":\"success\",\"installdata\":{\"adultpadA\":{\"expirydate\":\"2016-03-28\",\"newdate\":\"2016-01-28\",\"lot\":\"fdxccc\"},\"adultpadB\":{\"expirydate\":\"fvggfff\",\"newdate\":\"2016-01-28\",\"lot\":\"ggg\"},\"pedriaticpad\":{\"expirydate\":\"ygghgtfgvbgg\",\"newdate\":\"2016-01-28\",\"lot\":\"tffg\"},\"comments\":\"ffvffdddf\",\"spare_battery_install_date\":\"hggfffdd\",\"statusindicator\":\"no\",\"fastresponsekit\":\"yes\",\"datacardstatus\":\"yes\",\"serialnumer\":\"fffcg\",\"pedraitickey\":\"yes\",\"physicallocation\":\"Main Entrance\",\"total_aeds\":\"2\",\"total_responders\":\"2\"}}",
+    "date" => "20160128",
+    "time" => "142432",
+    "name" => "ssss",
+               );
+$newfile = "/tmp/" . time() . ".png";
+shell_exec( "cp '../signatures/20160128_142512_0.9850373465743341.png' $newfile" );
+$file_name_with_full_path = realpath($newfile);
+$post["media_file"] = "@". $file_name_with_full_path;
+
+$ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "<font color='red'>Status: " . $value->status . "<br>" );
+echo( "Error Message: " . $value->error_message . "<br>" );
+echo( "User ID: " . $value->userid . "<br>" );
+echo( "Attributes: " . print_r( $value->attrs, true ) . "<br></font>" );
+
+?>

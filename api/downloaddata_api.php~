@@ -1,0 +1,108 @@
+<? 
+$drill = array();
+$servicecall = array();
+$newinstall = array();
+
+$company_row= getCompanyRow( $schoolid );
+
+if( !$thiscompanyrow[iscorp] )
+{
+// first the drill part
+//    $hasopen=db_query_first_cell("select drill.drillid from drill left join drill_to_companyid dtc on drill.drillid = dtc.drillid where ( dtc.companyid = '".$schoolid."' or drill.companyid ='".$schoolid."') and completed = 0");
+    $hasopen = false;
+    if( !$hasopen )
+    {
+        $newid = db_query_insert_id( "insert into drill ( companyid ) values ( '$schoolid' )" );
+        db_query( "insert into drill_to_companyid ( drillid, companyid, showed ) values ( '$newid', '$schoolid', 1 )" );
+
+
+        if( !$company_row["iscorp"] )// we don't do any of this campus stuff w/ corp
+        {
+            $scho = getSchoolsInCampus( $company_row["campusid"], $company_row["id"] );
+            foreach( $scho as $s )
+            {
+                db_query( "insert into drill_to_companyid ( drillid, companyid, showed ) values ( '$newid', '$s[id]', 1 )" );
+            }
+        }
+        
+        $drillid = $newid;
+        
+    }
+    else
+    {
+        $drillid = $hasopen;
+    }
+    
+    $drill[id] = $drillid; 
+//file_put_contents( "/tmp/slow1", "2:" . date( "h:i:s", time() ) . "\n" , FILE_APPEND );
+    
+    
+// start new install
+    $q = db_query_rows("select aedid, serial from aed_esi where clientid = '$schoolid' and deleted = 0 and newinstall = 1" );
+    if( count( $q ) )
+    {
+        $newaedids = array();
+        $newscid = db_query_insert_id( "insert into servicecall ( companyid, singleaedid, newinstall ) values ( '$schoolid', '$aedid', 1 )" );
+        foreach( $q as $qrow )
+        {
+            db_query( "insert into aed_to_servicecall ( serial, servicecallid ) values ( '$qrow[serial]', '$newscid' )" );
+            $newaedids[] = array( "serial"=>$qrow[serial] );
+        }
+    }
+//file_put_contents( "/tmp/slow1", "2a:" . date( "h:i:s", time() ) . "\n" , FILE_APPEND );
+
+    $newinstall[id] = $newscid; 
+    $newinstall[newaedids] = $newaedids; 
+    
+
+    
+}
+// next the servicecall part
+//    $hasopen=db_query_first_cell("select servicecall.servicecallid from servicecall where ( servicecall.companyid ='".$schoolid."') and completed = 0 limit 1");
+$hasopen = false;
+
+    // if( !$hasopen )
+    //     $hasopen=db_query_first_cell("select servicecall.servicecallid from servicecall left join servicecall_to_companyid dtc on servicecall.servicecallid = dtc.servicecallid where ( dtc.companyid = '".$schoolid."' or servicecall.companyid ='".$schoolid."') and completed = 0 limit 1");
+
+
+//file_put_contents( "/tmp/slow1", "2b:" . date( "h:i:s", time() ) . " $hasopen \n" , FILE_APPEND );
+
+if( !$hasopen )
+    {
+	$newid = db_query_insert_id( "insert into servicecall ( companyid ) values ( '$schoolid' )" );
+	db_query( "insert into servicecall_to_companyid ( servicecallid, companyid ) values ( '$newid', '$schoolid' )" );
+
+    if( !$company_row["iscorp"] ) // we don't do any of this campus stuff w/ corp
+    {
+        $scho = getSchoolsInCampus( $company_row["campusid"], $company_row["id"] );
+        foreach( $scho as $s )
+	    {
+            db_query( "insert into servicecall_to_companyid ( servicecallid, companyid ) values ( '$newid', '$s[id]' )" );
+	    }
+    }
+	
+	$servicecallid = $newid;
+	
+    }
+else
+    {
+	$servicecallid = $hasopen;
+    }
+//file_put_contents( "/tmp/slow1", "3:" . date( "h:i:s", time() ) . "\n" , FILE_APPEND );
+$servicecall[id] = $servicecallid; 
+
+if( $company_row["iscorp"] ) // we don't do any of this campus stuff w/ corp
+    $existingaeds = getAedRows( $schoolid, false, 0, true ); // no campus here
+else
+    $existingaeds = getAedRows( $schoolid, false, $thiscompanyrow[campusid], true );
+    
+foreach( $existingaeds as $eid=>$erow )
+{
+    $erow["aedmissing"] = 0;
+    $existingaeds[$eid] = $erow;
+}
+
+//file_put_contents( "/tmp/slow1", "4:" . date( "h:i:s", time() ) . "\n" , FILE_APPEND );
+
+
+?>

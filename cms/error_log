@@ -1,0 +1,35 @@
+[28-Feb-2026 13:10:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[28-Feb-2026 13:10:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[28-Feb-2026 13:10:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[28-Feb-2026 13:10:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[04-Mar-2026 06:35:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[21-Mar-2026 18:06:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3
+[31-Mar-2026 16:41:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php:3
+Stack trace:
+#0 /home/emergencyskills/live.emergencyskills.com/cms/choose_schedule.php(2): include()
+#1 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/cms/mysql.php on line 3

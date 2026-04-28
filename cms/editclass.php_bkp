@@ -1,0 +1,265 @@
+<?
+include "mysql.php";
+
+if( $id )
+{
+session_unregister( "session_classname" );
+$session_classname = $id;
+session_register( "session_classname" );
+}
+if( $name )
+{
+$sql = ( "update classes set name = '$name', priority = '$priority', description = '$description', footer = '$footer', detailedname = '$detailedname', content = '$content', who = '$who' where id = $session_classname" ) ;
+mysql_query($sql) or die( mysql_error() );
+}
+
+$result = mysql_query( "select * from classes where id = '$session_classname' " );
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Emergency Skills Inc. -- Optimize Your Response Time</title>
+
+<META NAME="Keywords" CONTENT="CPR, CPR Classes, AED, AED training, AED Sales, Defib Sales, Defibrillator, Defibrillators, Defibrillation, Defib, Automatic External Defibrillator, Automatic External Defibrillator, Emergency Skills, Emergency Services, New York, New York City, NYC, NY, emergency, emergencies, urgent, 911, help, cardiac arrest, heart attack, stroke, public defibrillation, public access defibrillator, defib vendor, defib sales, defib training, Cardio Pulmonary Recussitation, Recussitate, Heimlich, Heimlich manuever, choking, pocket mask, ventilation, rescue breathing, manikin, manakin">
+
+<META NAME="Description" CONTENT="EMERGENCY SKILLS, Inc., a corporate safety training company, provides AED sales and CPR training the New York City metro area.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!---------- JavaScript begins...
+function ChangeImage (ImageName,FileName) 
+{
+	document[ImageName].src = FileName;
+}
+// JavaScript ends ---------->
+</SCRIPT>	
+
+
+<STYLE TYPE="text/css">
+<!--
+BODY {margin:0}
+-->
+</STYLE>	
+
+
+<STYLE TYPE="text/css">
+a:link { color: #330099; text-decoration: none }
+a:active { color: #330099; text-decoration: none }
+a:visited { color: #330099; text-decoration: none }
+a:hover { color: #330099; text-decoration: none }
+</STYLE> 
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+
+
+<body bgcolor="#000066" marginwidth="0" marginheight="0" link="blue" visited="blue">
+
+<br>
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" width="700">
+	<tr>
+		<td colspan="4" valign="top"><img src="images/topbanner.jpg" width="700" height="84"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" background="images/topnav_background.jpg" width="700" height="24">
+        <div align="right">		
+        <? include "ssi/topnav.php"; ?>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">		
+		<? include "ssi/leftnav.php"; ?>
+		</td>
+		<td valign="top" width="5"><img src="images/dotclear.gif" width="10"></td>
+		<td valign="top" width="476"><br><span class="copy">
+		
+		<!--begin center content-->
+		
+		
+		<table cellpadding="5" cellspacing="1" border="0" width="465">
+			<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><strong><a href="http://esi.vireo.org/adminmain.php">&laquo; Back to Admin Main</a></strong></span></td>				
+
+			</tr>
+			<!--<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><div align="right">* indicates required fields</div></span></td>				
+			</tr>-->
+		</table>
+		<p>
+		
+		<table cellpadding="5" cellspacing="1" border="0">
+			<tr>
+<? $row = mysql_fetch_array( $result ) ; ?>
+<form method='post'>	<td valign="top">
+<h3>Edit Info for <?=$row["name"]?></h3>
+<table><tr><th>Name</th></tr>
+<h3>Update</h3>
+<table>
+<tr><td>Name:</td><td> <input type='text' name='name' size='30' value="<?=$row["name"]?>"></td></tr>
+<tr><td>Priority: </td><td><input type='text' name='priority' size='3' value="<?=$row["priority"]?>"></td></tr>
+<tr><td>Description:</td><td> <textarea name='description'  cols='40' rows='5'><?=$row["description"]?></textarea></td></tr>
+<tr><td>Footer:</td><td> <textarea name='footer' rows='3' cols='40'><?=$row["footer"]?></textarea></td></tr>
+<tr><td>Detailed Name:</td><td> <input type='text' name='detailedname' size='45'  value="<?=$row["detailedname"]?>"></td></tr>
+<tr><td>Content:</td><td> <input type='text' name='content' size='45'  value="<?=$row["content"]?>"></td></tr>
+<tr><td>Who:</td><td> <input type='text' name='who' size='45'  value="<?=$row["who"]?>"></td></tr>
+</table>
+<input type="submit" value="Update" style="font-size: 10px;  font-family: verdana;"><br>
+<a href='editclasses.php'>Back to editing classes</a>
+</td>			
+			</tr>
+		</table>
+		
+		
+				
+		<!--
+		<table cellpadding="5" cellspacing="1" border="0" width="465">
+			<tr>
+				<td valign="top" bgcolor="#1C0792" colspan="2"><span class="white"><strong>Company Information</strong></span></td>				
+			</tr>
+			
+			<tr>                
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>Company Name*:</strong>
+       			</span></td>				
+			</tr>
+			
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>Address*:</strong><br><input type="text" size="40" VALUE="" maxlength="50" name="address" style="font-size: 10px;  font-family: verdana;"></span></td>
+				<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>Floor/Room:</strong><br><input type="text" size="40" VALUE="" maxlength="50" name="floor" style="font-size: 10px;  font-family: verdana;"></span></td>
+			</tr>
+			
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2">
+				
+					<table border="0" width="100%" cellpadding="0" cellspacing="0">
+						<tr>
+							<td valign="top"><span class="copy"><strong>City*:</strong><br><input type="text" size="40" VALUE="" maxlength="50" name="city" style="font-size: 10px;  font-family: verdana;"></span></td>
+							<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>State*:</strong><br>
+				
+				<select name="state" style="font-size: 10px;  font-family: verdana;">
+				<option value="Alabama">Alabama</option>
+				<option value="Alaska">Alaska</option>
+				<option value="Arizona">Arizona</option>
+				<option value="Arkansas">Arkansas</option>
+				<option value="California">California</option>
+				<option value="Colorado">Colorado</option>
+				<option value="Connecticut">Connecticut</option>
+				<option value="Delaware">Delaware</option>
+				<option value="DC">District of Columbia</option>
+				<option value="Florida">Florida</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Hawaii">Hawaii</option>
+				<option value="Idaho">Idaho</option>
+				<option value="Illinois">Illinois</option>
+				<option value="Indiana">Indiana</option>
+				<option value="Iowa">Iowa</option>
+				<option value="Kansas">Kansas</option>
+				<option value="Kentucky">Kentucky</option>
+				<option value="Louisiana">Louisiana</option>
+				<option value="Maine">Maine</option>
+				<option value="Maryland">Maryland</option>
+				<option value="Massachusetts">Massachusetts</option>
+				<option value="Michigan">Michigan</option>
+				<option value="Minnesota">Minnesota</option>
+				<option value="Mississippi">Mississippi</option>
+				<option value="Missouri">Missouri</option>
+				<option value="Montana">Montana</option>
+				<option value="Nebraska">Nebraska</option>
+				<option value="Nevada">Nevada</option>
+				<option value="New Hampshire">New Hampshire</option>
+				<option value="New Jersey">New Jersey</option>
+				<option value="New Mexico">New Mexico</option>
+				<option value="New York" selected>New York</option>
+				<option value="North Carolina">North Carolina</option>
+				<option value="North Dakota">North Dakota</option>
+				<option value="Ohio">Ohio</option>
+				<option value="Oklahoma">Oklahoma</option>
+				<option value="Oregon">Oregon</option>
+				<option value="Pennsylvania">Pennsylvania</option>
+				<option value="Rhode Island">Rhode Island</option>
+				<option value="South Carolina">South Carolina</option>
+				<option value="South Dakota">South Dakota</option>
+				<option value="Tennessee">Tennessee</option>
+				<option value="Texas">Texas</option>
+				<option value="Utah">Utah</option>
+				<option value="Vermont">Vermont</option>
+				<option value="Virginia">Virginia</option>
+				<option value="Washington">Washington</option>
+				<option value="West Virginia">West Virginia</option>
+				<option value="Wisconsin">Wisconsin</option>
+				<option value="Wyoming">Wyoming</option>
+				<option value="Alberta">Alberta</option>
+				<option value="British Columbia">British Columbia</option>
+				<option value="Manitoba">Manitoba</option>
+				<option value="New Brunswick">New Brunswick</option>
+				<option value="Newfoundland">Newfoundland</option>
+				<option value="Northwest Territories">Northwest Territories</option>
+				<option value="Nova Scotia">Nova Scotia</option>
+				<option value="Nunavut">Nunavut</option>
+				<option value="Ontario">Ontario</option>
+				<option value="Prince Edward Island">Prince Edward Island</option>
+				<option value="Quebec">Quebec</option>
+				<option value="Saskatchewan">Saskatchewan</option>
+				<option value="Yukon">Yukon</option>
+                <option value="Other">Other</option>
+			</select></span>
+            </td>														
+			<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>Zip*:</strong><br><input type="text" size="10" VALUE="" maxlength="50" name="zip" style="font-size: 10px;  font-family: verdana;"></span>
+			</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>Check here if this is  the headquarters location:</strong>&nbsp;&nbsp;<input type="checkbox" VALUE="1" name="isheadquarter" style="font-size: 10px; font-family: verdana;"></span></td>
+			</tr>
+			
+									
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>Contact Name:</strong><br><input type="text" size="87" VALUE="" maxlength="50" name="contactname" style="font-size: 10px;  font-family: verdana;"></span></td>
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>Contact Phone:</strong><br><span class="small"><em>Please enter as 111-222-3333</em></span><br><input type="text" size="40" VALUE="" maxlength="50" name="contactphone" style="font-size: 10px;  font-family: verdana;"></span></td>
+				<td valign="top" bgcolor="#E2DFDF"><span class="copy"><strong>Contact Email:</strong><br><input type="text" size="40" VALUE="" maxlength="50" name="contactemail" style="font-size: 10px;  font-family: verdana;"></span></td>
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>Check here if this is the primary contact:</strong>&nbsp;&nbsp;<input type="checkbox" VALUE="1" name="isprimarycontact" style="font-size: 10px; font-family: verdana;"></span></td>
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>Check here to permit contact login:</strong>&nbsp;&nbsp;<input type="checkbox" VALUE="1" name="canlogin" style="font-size: 10px; font-family: verdana;"></span></td>
+			</tr>
+		
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy"><strong>General Company Notes:</strong><br><textarea cols="85" name="companynotes" rows="3" wrap="virtual" style="font-size: 10px;  font-family: verdana;"></textarea></span></td>
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#FFFFFF" colspan="2"><br><div align="center"><input name="Save" type="submit" value="Save & Continue">
+                </div>
+                </td>			
+			</tr>	
+		</table>-->
+		<br>
+        <br>
+
+		
+		</span>
+		</td>
+		<td valign="top" width="15"><img src="images/dotclear.gif" width="10"></td>
+	</tr>
+</table>
+<br><br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<? 
+$schoolname = array_shift( explode( "\n", $_POST["schoolname" ] ) );
+$newid = db_query_insert_id( "insert into appuploads ( dateuploaded, type, uploader, dateinupload,esi_repname, name, version, schoolname ) values ( now(), 'ni', '". mysql_escape_string( $_POST["uploader"] ). "', '$signdate', '". mysql_escape_string( $_POST["esr_name"] ). "', '". mysql_escape_string( $_POST["name"] ). "', '". mysql_escape_string( $_POST["version"] ). "', '". mysql_escape_string( $schoolname ). "' )" );
+
+
+foreach( $data as $key=>$value )
+{
+    if( $key == "id" ) $schoolid = $value;
+    if( $key == "installdata" )
+    {
+        print_r( $value );
+        $scid = db_query_insert_id( "insert into scuploaddata( uploadid,serial ) values ( '$newid', '" . mysql_escape_string( $value->serialnumber ). "' )" );
+        foreach( $value as $skey=>$sval )
+        {
+            if( $skey == "adultpadA"|| $skey == "adultpadB"|| $skey == "pediatric" )
+            {
+                foreach( $sval as $another=>$aval )
+                {
+                    db_query( "insert into scuploaddetail ( dataid, name, value ) values ( '$scid', '{$skey}_{$another}', '". mysql_escape_string( $aval ) . "' )");
+                }
+            }
+            else
+            {
+                db_query( "insert into scuploaddetail ( dataid, name, value ) values ( '$scid', '{$skey}', '". mysql_escape_string( $sval ) . "' )");
+            }
+        }
+    }
+    else
+    {
+        db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', '$key', '". mysql_escape_string( $value )."' )" );
+    }
+}
+
+db_query( "update appuploads set schoolid = '$schoolid' where id = '$newid'" );
+
+// signature
+$signname = $newid . "_" . $_FILES["media_file"]["name"];
+move_uploaded_file( $_FILES["media_file"]["tmp_name"], "../signatures/" . $signname );
+db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', 'media_file', '".mysql_escape_string( $signname )."' )" );
+
+
+// esi signature
+$signname = $newid . "_esr_" . $_FILES["media_file_esr"]["name"];
+move_uploaded_file( $_FILES["media_file_esr"]["tmp_name"], "../signatures/" . $signname );
+db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', 'media_file_esr', '".mysql_escape_string( $signname )."' )" );
+
+
+?>

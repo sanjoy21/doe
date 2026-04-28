@@ -1,0 +1,20 @@
+[04-Mar-2026 03:57:49 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Picqer\Barcode\Exceptions\BarcodeException" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidCharacterException.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidCharacterException.php on line 5
+[04-Mar-2026 03:57:49 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Picqer\Barcode\Exceptions\BarcodeException" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidCheckDigitException.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidCheckDigitException.php on line 5
+[04-Mar-2026 03:57:50 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Picqer\Barcode\Exceptions\BarcodeException" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidFormatException.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidFormatException.php on line 5
+[04-Mar-2026 03:57:50 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Picqer\Barcode\Exceptions\BarcodeException" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidLengthException.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/InvalidLengthException.php on line 5
+[04-Mar-2026 03:57:51 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Picqer\Barcode\Exceptions\BarcodeException" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/UnknownTypeException.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/Exceptions/UnknownTypeException.php on line 5

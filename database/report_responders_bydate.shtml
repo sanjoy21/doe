@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Responder Report</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body bgcolor="#ffffff">
+
+<span class="copy">
+<strong>Nationwide Responders for Goldman, Sachs & Co.</strong><br>
+Sorted by Certification Expiration Date<br><br>
+<table cellpadding="3" cellspacing="0" border="1" width="100%">
+	<tr>
+		<td valign="top"><span class="copy"><strong>Certification Exp. Date</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Last Name</strong></span></td>
+		<td valign="top"><span class="copy"><strong>First Name</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Office ID</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Office Location</strong></span></td>
+		<td valign="top"><span class="copy"><strong>City</strong></span></td>		
+		<td valign="top"><span class="copy"><strong>State</strong></span></td>	
+		
+	</tr>
+	
+	<tr>
+		<td valign="top"><span class="copy">01/02/2004</span></td>
+		<td valign="top"><span class="copy"><a href="view_responder.shtml">Dean</a></span></td>
+		<td valign="top"><span class="copy">George</span></td>
+		<td valign="top"><span class="copy">GS4456</span></td>
+		<td valign="top"><span class="copy">6145 Main Street</span></td>	
+		<td valign="top"><span class="copy">Los Angeles</span></td>		
+		<td valign="top"><span class="copy">CA</span></td>	
+	</tr>
+	<tr>
+		<td valign="top"><span class="copy">07/28/2004</span></td>
+		<td valign="top"><span class="copy"><a href="view_responder.shtml">Franklin</a></span></td>
+		<td valign="top"><span class="copy">Carey</span></td>
+		<td valign="top"><span class="copy">GS9876</span></td>
+		<td valign="top"><span class="copy">345 SW 5th Street</span></td>
+		<td valign="top"><span class="copy">Austin</span></td>		
+		<td valign="top"><span class="copy">TX</span></td>	
+		
+	</tr>
+	<tr>
+		<td valign="top"><span class="copy">08/31/2005</span></td>
+		<td valign="top"><span class="copy"><a href="view_responder.shtml">Brown</a></span></td>
+		<td valign="top"><span class="copy">Sue</span></td>
+		<td valign="top"><span class="copy">GS1234</span></td>
+		<td valign="top"><span class="copy">920 Park Ave</span></td>
+		<td valign="top"><span class="copy">New York</span></td>		
+		<td valign="top"><span class="copy">NY</span></td>	
+		
+	</tr>
+</table>
+
+
+</span>
+</body>
+</html>

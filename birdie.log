@@ -1,0 +1,12 @@
+sent to url: https://06840.cxtsoftware.net/CxtWebService/CXTWCF.svc/v2/Orders
+
+values: {"order":{"custId":12,"orderType":"19","destination":{"name":"Emergency Skills, Inc","address1":"305 7th Ave","city":"New York","state":"NY","zip":"10001","phone":"212-564-6833","destComments":"Chris Franks","originComments":"3 BAGS CPR EQUIP"},"origin":{"originComments":"3 BAGS CPR EQUIP","name":"Trump Tower Residential","address1":"721 Fifth Avenue","city":"New York","state":"","zip":"10022","phone":"212-715-7210","destComments":"Cristian Gantolea"},"reference1":"3 Bags CPR TRNG EQUIP","reference2":"3 Bags CPR TRNG EQUIP","serviceType":"6","weight":"75","pieces":"3","emailPod":"dfunnye@emergencyskills.com","readyTimeFrom":1776085200000}}
+
+response: '<decimal xmlns="http://schemas.microsoft.com/2003/10/Serialization/">152272.00</decimal>'
+
+ended: SimpleXMLElement Object
+(
+    [0] => 152272.00
+)
+
+

@@ -1,0 +1,149 @@
+<? include "mysql.php"; 
+
+Header( "Location: home.php" );
+exit;
+$table_name= array('company'   => 'company_esi',
+                   'aed'       => 'aed_esi',
+                   'responder' => 'responders_esi'
+                  );
+
+if ($update_data) {
+    if ($data) {
+        db_query ("update $table_name[$data] set exported=1 where exported=0 and deleted=0");
+        Header( "location: adminmain.php " );
+    }
+}
+?>
+<? 
+include "ssi/top.php";
+?>
+<SCRIPT LANGUAGE="JavaScript">
+<!---------- JavaScript begins...
+function confirmExported(form,label) {
+    var ok=confirm("OK to mark all rows of "+label+" as exported?");
+    if (ok) {
+form.action='adminmain.php';  form.update_data.value=1;  form.data.value=label;
+        form.submit();
+    } else {
+form.action='viewcompany.php'; form.update_data.value=0;  form.data.value='';
+    }
+    return;
+}
+
+function ChangeImage (ImageName,FileName) 
+{
+document[ImageName].src = FileName;
+}
+// JavaScript ends ---------->
+</SCRIPT>
+
+<form action="viewcompany.php">
+<!--start center content-->
+
+
+<span class="copy">
+<strong>ADMIN MAIN</strong>
+<br>
+        <br>
+         <?
+$rows = db_query_rows( "select * from company_esi where deleted=0 order by companyname" );
+         ?>
+<table cellpadding="10" cellspacing="1" border="0" width="100%">
+<tr height="50">
+<td bgcolor="#E2DFDF" nowrap>
+                <span class="copy"><strong>View Client:</strong>
+&nbsp;&nbsp;
+                <select name="id" style="font-size: 10px;  font-family: verdana;">
+    <option value=""></option>
+                    <?
+                foreach( $rows as $row )
+                    {
+                    ?>
+                    <option value="<?=$row["id"]?>"><?=$row["companyname"]?></option>
+                    <?
+                    }
+                    ?>
+</select>
+                &nbsp;&nbsp;
+                <input type="submit" value="&nbsp;&nbsp;&nbsp;Go&nbsp;&nbsp;&nbsp;">
+</span>
+                </td>
+</tr>
+<tr>
+<td valign="middle" bgcolor="#E2DFDF">
+                 <span class="copy"><strong>
+                    <a href="login.php">      <u>Log out</u></a><br><br>
+                    <a href="calendar.php">      <u>Calendar</u></a><br><br>
+<? if( !$readonly ) { ?>
+                    <a href="editcompany.php">      <u>Add New Client</u></a><br><br>
+ <a href="editlists.php">      <u>Add New Dropdown Menu Items</u></a><br><br>
+ <a href="http://esi.vireo.org/cms/login.php?username=sarahg@emergencyskills.com&password=doctor">      <u>Edit Classes</u></a><br><br>
+<? } ?>
+<strong>Export to file:</strong>
+                 </span>
+ <br>
+                 <span style="font-size: 9px;  font-family: verdana;">
+<input type="hidden" name="update_data" value="">
+<input type="hidden" name="data" value="">
+                    &gt;<a href="/report.php?exportedonly=true&data=company&xls=true">  <u>New Company Data</u></a>
+    &nbsp;&nbsp;<a href="javascript:confirmExported(document.forms[0],'company')">(<u>mark as exported</u>)</a><br>
+                    &gt;<a href="/report.php?data=aed&xls=true&expired=true">      <u>Expired Aed Data</u></a><br>
+                    &gt;<a href="/report.php?exportedonly=true&data=aed&xls=true">      <u>New Aed Data</u></a>
+    &nbsp;&nbsp;<a href="javascript:confirmExported(document.forms[0],'aed')">(<u>mark as exported</u>)</a><br>
+                    &gt;<a href="/report.php?exportedonly=true&data=responder&xls=true&ob=lastname"> <u>New Responder Data</u></a>
+    &nbsp;&nbsp;<a href="javascript:confirmExported(document.forms[0],'responder')">(<u>mark as exported</u>)</a><br>
+    &gt;<a href="/report?dataexportedonly=true&=aedhistory"> <u>New Event History</u></a>
+                 </strong>
+                 </span>
+                 <br>
+                </td>
+</tr>
+            <tr>
+<td valign="top" bgcolor="#1C0792" colspan="2">
+<table bgcolor="#1C0792" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><span class="white"><strong>View Reports</strong></span></td><td valign="top" bgcolor="#1C0792" align="right">&nbsp;</td></tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy">
+</form><form method='post' action='report.php'><input type='hidden' name='xls' value='true'>View <select name='data'><option value='company'><?=getSchoolStr( "Schools" )?></option></select> by <select name='ob'><option value='borough, region, zip'>Borough, Region, Zip Code</option></select> <input type='submit' name='go' value='Go'></form><br>
+
+<strong><a href="reportresponders.php?order=order+by+lastname">Responders by Last Name</a> <a href="reportresponders.php?order=order+by+lastname&xls=true">(xls)</a><br>
+<a href="reportresponders.php?order=order+by+cardrenewaldate">Responders by Recommended Renewal Date</a> <a href="reportresponders.php?order=order+by+cardrenewaldate&xls=true">(xls) </a><br>
+<a href="reportaeds.php?order=order+by+serial">AEDs by Serial Number</a> <a href="reportaeds.php?order=order+by+serial&xls=true">(xls)</a><br>
+<a href="reportaeds.php?order=order+by+filingexpirationdate">AEDs by Municipal Filing Expiration Date</a> <a href="reportaeds.php?order=order+by+filingexpirationdate&xls=true">(xls) </a><br>
+<a href="reportaeds.php?order=order+by+padaexpiration">AEDs by Pad A Expiration Date</a> <a href="reportaeds.php?order=order+by+padaexpiration&xls=true">(xls) </a><br>
+<a href="reportaedhistory.php?order=order+by+serial">AEDs Event History</a><a href="reportaedhistory.php?order=order+by+serial&xls=true">(xls)</a></td></tr></table>
+                    <table width='100%' cellpadding=0 cellspacing=0>
+            <tr>
+<td valign="top" bgcolor="#1C0792" colspan="2">
+<table bgcolor="#1C0792" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><span class="white"><strong><br>Search Reports<br><br></strong></span></td><td valign="top" bgcolor="#1C0792" align="right">&nbsp;</td></tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#E2DFDF" colspan="2"><span class="copy">
+                    
+                    <table><tr><td>
+<span class="copy">View: <select name='which'><option value='aed'>AEDs</option><option value='company'>Companies</option><option value='company'>Responders</option></select> <br>
+                    By: <select name='field'><option value='borough'>Borough</option><option value='region'>Region</option><option value='borough'>Zip Code</option></select> <br>
+                    With Value: <input type='text' name='value'> (leave blank for all)<br>
+                        <input type='submit' name='search' value='Search'>
+                        </td></tr></table>
+
+                    </td>
+ </tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--end center content-->
+                    <? include "ssi/footer.php" ; ?>
+
+<!--end footer-->
+</span>
+</td>
+<td valign="top" width="15"><img src="images/dotclear.gif" width="10"></td>
+</tr>
+</table>
+<br><br>
+</div>
+</form>
+</body>
+</html>

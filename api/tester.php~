@@ -1,0 +1,188 @@
+<?
+
+$apikey = "daMEs26rufAqasw2pUYU";
+if( $username ) {
+     $post = array( 
+     'method' => "doLogin", 
+     'apikey' => $apikey, 
+     'username' => $username,
+     'password' => $password,
+		    );
+     
+     $ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "<font color='red'>Status: " . $value->status . "<br>" );
+echo( "Error Message: " . $value->error_message . "<br>" );
+echo( "User ID: " . $value->userid . "<br>" );
+echo( "Attributes: " . print_r( $value->attrs, true ) . "<br></font>" );
+
+     $err = json_last_error();
+     if( $err && $err != JSON_ERROR_NONE)
+	 {
+	     echo( $response );
+	     switch ($err) {
+	     case JSON_ERROR_NONE:
+		 echo ' - No errors';
+		 break;
+	     case JSON_ERROR_DEPTH:
+		 echo ' - Maximum stack depth exceeded';
+		 break;
+	     case JSON_ERROR_STATE_MISMATCH:
+		 echo ' - Underflow or the modes mismatch';
+		 break;
+	     case JSON_ERROR_CTRL_CHAR:
+		 echo ' - Unexpected control character found';
+		 break;
+	     case JSON_ERROR_SYNTAX:
+		 echo ' - Syntax error, malformed JSON';
+		 break;
+	     case JSON_ERROR_UTF8:
+		 echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+		 break;
+	     default:
+		 echo ' - Unknown error';
+		 break;
+	     }
+	 }
+     
+     
+}
+
+
+if( $getschools ) {
+     $post = array( 
+     'method' => "getSchools", 
+     'apikey' => $apikey, 
+     'userid' => $userid,
+     'zipcode' => $zipcode,
+		    );
+     
+     $ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+    echo( "<textarea cols='100' rows='40'>" );
+    echo( "Status: " . $value->status . "\n" );
+    echo( "Values: " . ( print_r( $value, true ) ). "\n" );
+    echo( "</textarea>" );
+
+     $err = json_last_error();
+     if( $err && $err != JSON_ERROR_NONE)
+	 {
+	     echo( $response );
+	     switch ($err) {
+	     case JSON_ERROR_NONE:
+		 echo ' - No errors';
+		 break;
+	     case JSON_ERROR_DEPTH:
+		 echo ' - Maximum stack depth exceeded';
+		 break;
+	     case JSON_ERROR_STATE_MISMATCH:
+		 echo ' - Underflow or the modes mismatch';
+		 break;
+	     case JSON_ERROR_CTRL_CHAR:
+		 echo ' - Unexpected control character found';
+		 break;
+	     case JSON_ERROR_SYNTAX:
+		 echo ' - Syntax error, malformed JSON';
+		 break;
+	     case JSON_ERROR_UTF8:
+		 echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+		 break;
+	     default:
+		 echo ' - Unknown error';
+		 break;
+	     }
+	 }
+     
+     
+}
+
+if( $downloaddata ) {
+    $post = array( 
+		  'apikey' => $apikey, // just an example
+		  'method' => "downloadData", 
+		  'schoolid' => $schoolid
+		   );
+    
+    $ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $value = json_decode( $response );
+    echo( "<textarea cols='100' rows='40'>" );
+    echo( "Status: " . $value->status . "\n" );
+    echo( "Values: " . ( print_r( $value, true ) ). "\n" );
+    echo( "</textarea>" );
+    
+    $err = json_last_error();
+    if( $err && $err != JSON_ERROR_NONE)
+	{
+	    echo( $response );
+	    switch ($err) {
+	    case JSON_ERROR_NONE:
+		echo ' - No errors';
+		break;
+	    case JSON_ERROR_DEPTH:
+		echo ' - Maximum stack depth exceeded';
+		break;
+	    case JSON_ERROR_STATE_MISMATCH:
+		echo ' - Underflow or the modes mismatch';
+		break;
+	    case JSON_ERROR_CTRL_CHAR:
+		echo ' - Unexpected control character found';
+		break;
+	    case JSON_ERROR_SYNTAX:
+		echo ' - Syntax error, malformed JSON';
+		break;
+	    case JSON_ERROR_UTF8:
+		echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+		break;
+	    default:
+		echo ' - Unknown error';
+		break;
+	    }
+	}
+    
+    
+}
+
+
+
+?>
+<form method='post'>
+<b>Do Login</b><br>
+      Username: <input type='text' name='username'><br>
+      Password: <input type='text' name='password'><br>
+<input type='submit' name='dologin' value='Login'>
+<br><br>
+</form>
+<form method='post'>
+<b>Get Schools</b><br>
+      Userid: <input type='text' name='userid'><br>
+      Zip Code: <input type='text' name='zipcode'><br>
+    <input type='submit' name='getschools' value='Get Schools'>
+<br><br>
+</form>
+
+<form method='post'>
+<b>Download Data</b><br>
+      School ID: <input type='text' name='schoolid'><br>
+    <input type='submit' name='downloaddata' value='Get Data'>
+<br><br>
+</form>
+

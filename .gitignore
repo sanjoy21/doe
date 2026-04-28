@@ -1,0 +1,24 @@
+# Ignore sensitive files
+.env
+config.php
+php.ini
+.htaccess
+
+# Ignore all employee-uploaded content
+/cardpdfs/*
+/classcards/*
+/downloads/*
+/drillupload/*
+/historicaldata/*
+/mfs/*
+/monitoringforms/*
+/pdfs/*
+/reports/*
+/savedat/*
+/savedcardpdfs/*
+/savedsafetyplans/*
+/signatures/*
+/uploadedpdfs/*
+
+# Keep the folders but ignore the files inside
+!/**/.gitkeep

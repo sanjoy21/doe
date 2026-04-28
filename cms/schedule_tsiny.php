@@ -1,0 +1,200 @@
+<?
+include "mysql.php" ;
+
+$result = mysql_query("select * from cms where type = '$city'" );
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Emergency Skills Inc. -- Optimize Your Response Time</title>
+
+<META NAME="Keywords" CONTENT="CPR, CPR Classes, AED, AED training, AED Sales, Defib Sales, Defibrillator, Defibrillators, Defibrillation, Defib, Automatic External Defibrillator, Automatic External Defibrillator, Emergency Skills, Emergency Services, New York, New York City, NYC, NY, emergency, emergencies, urgent, 911, help, cardiac arrest, heart attack, stroke, public defibrillation, public access defibrillator, defib vendor, defib sales, defib training, Cardio Pulmonary Recussitation, Recussitate, Heimlich, Heimlich manuever, choking, pocket mask, ventilation, rescue breathing, manikin, manakin">
+
+<META NAME="Description" CONTENT="EMERGENCY SKILLS, Inc., a corporate safety training company, provides AED sales and CPR training the New York City metro area.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!---------- JavaScript begins...
+function ChangeImage (ImageName,FileName) 
+{
+	document[ImageName].src = FileName;
+}
+// JavaScript ends ---------->
+</SCRIPT>	
+
+
+<STYLE TYPE="text/css">
+<!--
+BODY {margin:0}
+-->
+</STYLE>	
+
+
+<STYLE TYPE="text/css">
+a:link { color: #330099; text-decoration: none }
+a:active { color: #330099; text-decoration: none }
+a:visited { color: #330099; text-decoration: none }
+a:hover { color: #330099; text-decoration: none }
+</STYLE> 
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+
+
+<body bgcolor="#000066" marginwidth="0" marginheight="0" link="blue" visited="blue">
+
+<br>
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" width="700">
+	<tr>
+		<td colspan="4" valign="top"><img src="images/topbanner.jpg" width="700" height="84"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" background="images/topnav_background.jpg" width="700" height="24">
+        <div align="right">		
+        <? include "ssi/topnav.php"; ?>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">		
+		<? include "ssi/leftnav.php"; ?>
+		</td>
+		<td valign="top" width="5"><img src="images/dotclear.gif" width="10"></td>
+		<td valign="top" width="476"><br><span class="copy">
+		
+		<!--begin center content-->
+		
+		
+		<table cellpadding="5" cellspacing="1" border="0" width="465">
+			<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><strong><a href="adminmain.jsp">&laquo; Back to Admin Main</a></strong></span></td>				
+			</tr>
+			<!--<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><div align="right">* indicates required fields</div></span></td>				
+			</tr>-->
+		</table>
+		<p>
+		
+		<strong>You are editing the TSI New York Schedule.</strong><p>
+		
+		The current schedule is below, please use the buttons to make edits.<p>
+		
+		
+			<table border="0" cellpadding="3" width="465"><tr><td colspan="5" align="right"><input type="image" src="images/new.jpg">&nbsp;<input type="image" src="images/logoff.jpg"></td></tr></table>			
+						
+						<table border="0" cellpadding="0" cellspacing="1" width="465" bgcolor="#1C0792"><tr><td colspan="5">
+						<table border="1" cellpadding="3" cellspacing="0" width="465" bgcolor="#ffffff">
+							<tr><td colspan="5" bgcolor="#1C0792"><span class="white"><strong>Schedule</strong></span></td></tr>
+							<tr>
+								<td valign="top" width="150">
+									<div align="center"><span class="copy">
+									Monday, Oct. 4, 2004<br>
+									10:00am-5:00pm
+									</span></div>									
+								</td>							
+								<td valign="top">
+									<div align="center"><span class="copy">
+									Wall Street
+									</span></div>									
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy">
+									$65
+									</span></div>							
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy"><strong>
+									<a href="">Register</a>
+									</strong></span></div>									
+								</td>
+								<td valign="top">
+								<div align="center">
+								<input type="image" src="images/edit.jpg"><br>
+								<input type="image" src="images/delete.jpg">
+								</div>
+								</td>
+							</tr>
+
+							<tr>
+								<td valign="top" width="150">
+									<div align="center"><span class="copy">
+									Wednesday, Oct. 6, 2004<br>
+									10:00am-5:00pm
+									</span></div>									
+								</td>							
+								<td valign="top">
+									<div align="center"><span class="copy">
+									1st Ave. Studio
+									</span></div>									
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy">
+									$65
+									</span></div>							
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy"><strong>
+									<a href="">Register</a>
+									</strong></span></div>									
+								</td>
+								<td valign="top">
+								<div align="center">
+								<input type="image" src="images/edit.jpg"><br>
+								<input type="image" src="images/delete.jpg">
+								</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td valign="top" width="150">
+									<div align="center"><span class="copy">
+									Monday, Oct. 11, 2004<br>
+									10:00am-5:00pm
+									</span></div>									
+								</td>							
+								<td valign="top">
+									<div align="center"><span class="copy">
+									Stamford-Commerce
+									</span></div>									
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy">
+									$65
+									</span></div>							
+								</td>
+								<td valign="top">
+									<div align="center"><span class="copy"><strong>
+									<a href="">Register</a>
+									</strong></span></div>									
+								</td>
+								<td valign="top">
+								<div align="center">
+								<input type="image" src="images/edit.jpg"><br>
+								<input type="image" src="images/delete.jpg">
+								</div>
+								</td>
+							</tr>
+							
+						</table>
+						</td></tr></table>
+				
+
+<br><br>
+
+</td></tr></table>	
+		<br>
+        <br>
+
+		
+		</span>
+		</td>
+		<td valign="top" width="15"><img src="images/dotclear.gif" width="10"></td>
+	</tr>
+</table>
+<br><br>
+</div>
+
+</body>
+</html>

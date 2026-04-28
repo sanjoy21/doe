@@ -1,0 +1,42 @@
+CLIENT: Emergency Skills Inc (ESI)
+http://www.emergencyskills.com/
+
+Ftp Info:
+
+
+
+Front end:
+HostName: www.emergencyskills.com
+User Name: web77
+Password: e7*s3u2
+
+
+Back end (mysql database): 
+HostName: esi.jportfolio.com
+User Name: shannon
+Password: kodakm
+
+
+
+Task 1:  Database Edits
+
+URL to see database in action: http://esi.jportfolio.com:8080/login.jsp
+username: sarahg@emergencyskills.com
+password: doctor
+
+
+Goal: To make the following edits to the existing database.
+
+3) Turn off requirement for Address, City, State for Companies, AEDs and Responders
+http://esi.jportfolio.com:8080/inputcompany.jsp
+http://esi.jportfolio.com:8080/editcompany.jsp
+http://esi.jportfolio.com:8080/inputaed.jsp
+http://esi.jportfolio.com:8080/editaed.jsp
+http://esi.jportfolio.com:8080/inputresponder.jsp
+http://esi.jportfolio.com:8080/editresponder.jsp
+
+4) Put phone extension box on both Company Info and Responders pages (not a required field)
+http://esi.jportfolio.com:8080/inputcompany.jsp
+http://esi.jportfolio.com:8080/editcompany.jsp
+http://esi.jportfolio.com:8080/inputresponder.jsp
+http://esi.jportfolio.com:8080/editresponder.jsp

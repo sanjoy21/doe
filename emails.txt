@@ -1,0 +1,65 @@
+class_delete_thanks.php:54:sendMail( "sherry@emergencyskills.com, barbara@emergencyskills.com, kevin@emergencyskills.com, chris@emergencyskills.com, rebekah@emergencyskills.com", "CPR/AED Training Cancelled", $body, "info@emergencyskills.com" ); 
+class_detail.php:407:sendMail( "sherry@emergencyskills.com, barbara@emergencyskills.com", "Class Request Declined", $body, "info@emergencyskills.com" );
+class_edit.php:43:    sendMail( "sherry@emergencyskills.com", "CPR/AED Training Program Updated", $body, "info@emergencyskills.com" ); 
+dashboard.php:212:   <? if( strtolower( $session_userid ) == "sherry@emergencyskills.com" ) { ?>
+drillwarning.php:43:$fromemail = "sherry@emergencyskills.com";
+editaccessoryrequest.php:81:        mail( "hthomps@schools.nyc.gov,cmcgee3@schools.nyc.gov", "AED/Accessory Request", "$initial  \n $ar_row[requestdate] \n $crow[companyname] \n $crow[schoolcode]\n $crow[address] $crow[city], $crow[zip] \n Principal Name: $crow[principalname] \n Principal Email: $crow[principalemail] \n School Phone: $crow[schoolphone] \n\nEmergency Skills, Inc.", "From:sherry@emergencyskills.com\nCc:sherry@emergencyskills.com");
+editdrill.php:115:    if( strtolower( $session_userid ) == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" ) <-- for sherry comments
+editdrill.php:208:        sendMail( "sherry@emergencyskills.com, sfennessy@schools.nyc.gov", $crow[companyname] . ": Action Needed", "Drill $drillid needs action.\n https://doe.emergencyskills.com/editdrill.php?drillid=$drillid\n$unavail", "info@emergencyskills.com" );
+editdrill.php:358:    mail( "sherry@emergencyskills.com", $subject, $body, "From: info@emergencyskills.com" );
+editdrill.php:702:                <? if( $session_userid == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" ) { ?>
+editnewinstallation.php:34:    if( $session_userid == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" )
+editnewinstallation.php:66:sendMail( "sherry@emergencyskills.com, sfennessy@schools.nyc.gov", "Action Needed", "New Installation $newinstallationid needs action.\n https://doe.emergencyskills.com/editnewinstallation.php?newinstallationid=$newinstallationid\n", "info@emergencyskills.com" );
+editnewinstallation.php:83:        mail( "hthomps@schools.nyc.gov, cmcgee3@schools.nyc.gov", "AED/Accessory Request", "$initial  \n $newinstallation_row[newinstallationdate] \n $crow[companyname] \n $crow[schoolcode]\n $crow[address] $crow[city], $crow[zip]\n Principal Name: $crow[principalname] \n Principal Email: $crow[principalemail] \n School Phone: $crow[schoolphone] \n\nEmergency Skills, Inc.", "From:sherry@emergencyskills.com\nCc:sherry@emergencyskills.com");
+editnewinstallation.php:382:                <? if( $session_userid == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" ) { ?>
+editresponder.php:761:if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "sarahg@emergencyskills.com" )
+editservicecall.php:35:    if( $session_userid == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" )
+editservicecall.php:71:        sendMail( "sherry@emergencyskills.com, sfennessy@schools.nyc.gov", "Action Needed", "Service Call $servicecallid needs action.\n https://doe.emergencyskills.com/editservicecall.php?servicecallid=$servicecallid\n (From: $session_userid)", "info@emergencyskills.com" );
+editservicecall.php:443:                <? if( strtolower( $session_userid ) == "sherry@emergencyskills.com" || strtolower( $session_userid ) == "lisas222@cox.net" || strtolower( $session_userid ) == "lisas222@optonline.net" ) { ?>
+edituser.php:80:    <? if( $session_userid == "sarahg@emergencyskills.com" || $session_userid == "sherry@emergencyskills.com" || $session_userid == "barbara@emergencyskills.com" ) { ?>
+edituser.php:128:<tr><td class='copy'>Password:</td><td><input type='<?=$session_userid=="sherry@emergencyskills.com"?"text":"password"?>'  class='copy' name='password' value="<?=$row["password"]?>"></td></tr>
+emailtrainers.php:96:$mail->AddAddress("sherry@emergencyskills.com");
+expiringreport.php:53:$mail->AddAddress("sherry@emergencyskills.com");
+exportforterrance2.php:44:$mail->AddAddress("sherry@emergencyskills.com");
+exportforterrance.php:52:$mail->AddAddress("sherry@emergencyskills.com");
+exports.php:66:<? if( strtolower( $session_userid ) == "sherry@emergencyskills.com" ) { ?>
+fridaycertreport.php:132:sendHTMLMail( "sherry@emergencyskills.com", $subject, $body,"info@emergencyskills.com" );
+functions.php:2474:    $replacements["esialive@emergencyskills.com"] = "sherry@emergencyskills.com";
+functions.php:3180:        sendMail( "sherry@emergencyskills.com", $subject, $newbod, "barbara@emergencyskills.com", $issos?"SOS Alert":"Scheduling Alert" );
+gethtmlbodyforscheduleclass.php:157:<strong>Sherry Fusco</strong> at <a href="mailto:sherry@emergencyskills.com">sherry@emergencyskills.com</a> <br>
+individual_registration_thanks.php:225:    $mail->AddBCC("sherry@emergencyskills.com" );
+monthlyreminderresend.php:30:        sendHTMLMail( "sherry@emergencyskills.com", $subject, $body, $fromemail, $fromname, $key );
+monthlyreminders.php:30:        sendHTMLMail( "sherry@emergencyskills.com", $subject, $body, $fromemail, $fromname, $key );
+monthlyreminders.php:136:$fromemail = "sherry@emergencyskills.com";
+monthlyreminders.php:204:$fromemail = "sherry@emergencyskills.com";
+monthlyreport.php:42:$mail->AddReplyTo( "sherry@emergencyskills.com" );
+needs_edit.php:25:<strong>Sherry Fusco</strong> at <a href="mailto:sherry@emergencyskills.com">sherry@emergencyskills.com</a> 
+nightlyaedchecklist.php:36:    sendMail( "sherry@emergencyskills.com", $subject, $body, "info@emergencyskills.com" );
+nightlycovidcheckresults.php:25:mail( "sherry@emergencyskills.com", "Covid questions not answered in time", $body, "From: info@emergencyskills.com" );
+recertnotesreport.php:2:    if( $session_userid != "sarahg@emergencyskills.com" &&  $session_userid != "sherry@emergencyskills.com")
+recertnotesreport.php:70:<?     if( $session_userid == "sarahg@emergencyskills.com" ||  $session_userid == "sherry@emergencyskills.com") { ?>
+reports.php:206:<? if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "sarahg@emergencyskills.com" ) { ?>
+reports.php:267:<? if( $session_userid == "sherry@emergencyskills.com" ) { ?>
+response_plan.php:100:Scheduling training, drills, and service calls; Performing monthly maintenance of the AED and notifying Emergency Skills, Inc. (sherry@emergencyskills.com) of completion of maintenance or if the defibrillator is in need of service (see Maintenance Checklist); maintaining records of trained responders and informing Emergency Skills, Inc. of changes. If an athletic director, issuing AEDs to coaches and retrieving AEDs for scheduled drills and inspections. 
+schoolplanupdate.php:117:    <td><strong><span class="title">EDIT SITE RESPONSE PLAN</span></strong><Br><br><i>This form is for school changes only. For individual user changes please email: <a href="mailto:sherry@emergencyskills.com">sherry@emergencyskills.com</a></i>.
+sendmonthlyaedchecklistcorporate.php:55:sendHTMLMail( $email, $subject, nl2br( $body ), "sherry@emergencyskills.com" );
+sendmonthlyaedchecklist.php:55:sendHTMLMail( $email, $subject, nl2br( $body ), "sherry@emergencyskills.com" );
+sendweeklytrainers.php:147:    $mail->From = "sherry@emergencyskills.com";
+sendweeklytrainers.php:149:    $mail->AddReplyTo( "sherry@emergencyskills.com", "Sherry Fennessey" );
+settings.php:49:<? if( $session_userid == "sherry@emergencyskills.com" ) { ?> <-- upload trainer docs
+settings.php:74:<? if( $session_userid == "sherry@emergencyskills.com" ) { ?> <-- homepage text
+trainer_profile.php:408:</select> <i>Please email <a href='mailto:sherry@emergencyskills.com'>sherry@emergencyskills.com</a> if your provider is not listed.</i>
+trainer_profile.php:409:<? if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "sarahg@emergencyskills.com" ) { ?>
+trainer_profile.php:467:if( in_array( strtolower( $session_userid ), array( "sarahg@emergencyskills.com", "sherry@emergencyskills.com", "barbara@emergencyskills.com" ) ) )
+updatecompleteds.php:4:if( $session_userid != "sherry@emergencyskills.com" || !$id )
+users.php:83:    <? if( $session_userid == "sarahg@emergencyskills.com" || $session_userid == "sherry@emergencyskills.com" ) {?>
+users.php:98:if( ($session_userid == "sarahg@emergencyskills.com" || $session_userid == "sherry@emergencyskills.com") && !$t[overalladmin]) { 
+users.php:108:if( ($session_userid == "sarahg@emergencyskills.com" || $session_userid == "sherry@emergencyskills.com") && !$t[overalladmin]) {
+users.php:118:    <? if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "sarahg@emergencyskills.com" ) { ?>    
+viewcompany.php:126:    sendMail( "sherry@emergencyskills.com", "new phone call: " . getCompanyName( $id ), "A new call for ". getCompanyName( $id ) . " happened at : $newcalldate\n\n $newcall\n\n user: $session_userid\n IP: ".$_SERVER[REMOTE_ADDR], "info@emergencyskills.com" );
+viewcompany.php:135:        sendMail( "sherry@emergencyskills.com, hthomps@schools.nyc.gov, cmcgee3@schools.nyc.gov", getCompanyName( $id ), "Notes to ".getSchoolStr( "the DOE", $crow[iscorp] ).": ". $crow[companyname] . "\n".getCompanyAddress( $id ) . "\n$crow[schoolphone]\n happened at : ".date( "Y-m-d H:i" ) ."\n\n $newsupply", "info@emergencyskills.com" );
+viewcompany.php:433:if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "sarahg@emergencyskills.com"  ) { 
+viewcompany.php:679:<? if( $session_userid == "sherry@emergencyskills.com" || $session_userid == "rebekah@emergencyskills.com"  ) { ?>
+viewcompany.php:977:    <tr bgcolor="#e1e1f6"><th class='copy'>Name</th><? if( strtolower( $session_userid ) == "sarahg@emergencyskills.com" || strtolower( $session_userid ) == "sherry@emergencyskills.com" ) { ?><th class='copy'>Password</th><? } ?><th class='copy'>Login</th><th class='copy'><?=getSchoolStr( "School" )?></th></tr>
+viewcompany.php:981:    echo( "<tr bgcolor='#ffffff'><td class='copy' valign='top'>".$t[first_name]." ".$t[last_name]."</a></td>" . (  strtolower( $session_userid ) == "sarahg@emergencyskills.com" || strtolower( $session_userid ) == "sherry@emergencyskills.com"?"<td valign='top' class='copy'><a href='edituser.php?id=$t[id]'>$t[password]</a></td>":"" ) ."<td valign='top' class='copy'>".$t[userid]."</td><td class='copy'> " );
+viewsupplyrequests.php:27:<? if( $session_userid == "sherry@emergencyskills.com" ) { ?>

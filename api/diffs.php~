@@ -1,0 +1,25 @@
+worked:<br>
+<br>
+    [apikey] => daMEs26rufAqasw2pUYU<br>
+    [method] => uploadServiceCall<br>
+    [data] => {\"id\":\"12034\",\"address\":\"83-34 Kew Gardens Road\",\"city\":\"Kew Gardens\",\"state\":\"New York\",\"zip\":\"11415\",\"phone\":\"718-544-4343\",\"principal\":\"Paulette Foglio\",\"principalemail\":\"pfoglio@schools.nyc.gov\",\"contact\":\"Nicholas Sforza\",\"contactemail\":\"nsforza2@schools.nyc.gov\",\"contactphone\":\"718-544-4343\",\"code\":\"28-Q-099\",\"servicecallid\":\"11202\",\"status\":\"success\",\"servicedata\":[{\"adultpadA\":{\"expirationdate\":\"2016-09-01\",\"lot\":\"40303-1802\",\"newdate\":\"\"},\"adultpadB\":{\"expirationdate\":\"2016-09-01\",\"lot\":\"40303-1802\",\"newdate\":\"\"},\"pediatric\":{\"expirationdate\":\"2016-09-01\",\"lot\":\"Y030614-02\",\"newdate\":\"\"},\"has_frx_pediatric_key\":\"no\",\"spare_battery_before_date\":\"2015-03-01\",\"aedid\":\"13796\",\"spare_battery_new_date\":\"\",\"PSAL_AED_out_with_coach\":\"no\",\"request_doe_send_frx\":\"no\",\"request_doe_send_fast_response_kit\":\"no\",\"has_fast_response_kit\":\"no\",\"comments\":\"\",\"serial_number\":\"\",\"senddatacardstatus\":\"no\",\"hasdatacardstatus\":\"no\",\"status_indicator\":\"yes\",\"sendwallcabinet\":\"no\",\"haswallcabinet\":\"no\",\"unit_unavailable\":\"no\",\"physicallocation\":\"Main Entrance annex\",\"error_with_unit\":\"no\",\"request_doe_send_spare_battery\":\"no\",\"error_info\":\"\"}]}<br>
+    [schoolname] => Kew Gardens Annex Building<br>
+    [uploader] => bethanfatim@gmail.com<br>
+    [date] => 20160418<br>
+    [time] => 114512<br>
+    [name] => Nick Sforza<br>
+    [esr_name] => Bethany Saduddin Singh<br>
+<br>
+didn't work: <br>
+<br>
+<br>
+    [apikey] => daMEs26rufAqasw2pUYU<br>
+    [method] => uploadServiceCall<br>
+    [data] => {\"id\":\"13972\",\"address\":\"83-30 Kew Gardens Road\",\"city\":\"Queens\",\"state\":\"New York\",\"zip\":\"11415\",\"phone\":\"(718) 558-6300\",\"principal\":\"Doreen Duff, District Director\",\"principalemail\":\"DDuff@schools.nyc.gov\",\"contact\":\"Dawn ORourke\",\"contactemail\":\"dorourke@schools.nyc.gov\",\"contactphone\":\"(718) 558-6300\",\"code\":\"28-Q-335\",\"servicecallid\":\"11203\",\"status\":\"success\",\"servicedata\":[{\"adultpadA\":{\"expirationdate\":\"2016-08-01\",\"lot\":\"509280955\",\"newdate\":\"2018-03-01\"},\"adultpadB\":{\"expirationdate\":\"2016-10-01\",\"lot\":\"509280955\",\"newdate\":\"2018-03-01\"},\"pediatric\":{\"expirationdate\":\"0000-00-00\",\"lot\":\"\",\"newdate\":\"\"},\"has_frx_pediatric_key\":\"yes\",\"spare_battery_before_date\":\"2020-02-01\",\"aedid\":\"28442\",\"spare_battery_new_date\":\"\",\"PSAL_AED_out_with_coach\":\"no\",\"request_doe_send_frx\":\"no\",\"request_doe_send_fast_response_kit\":\"no\",\"has_fast_response_kit\":\"yes\",\"comments\":\"\",\"serial_number\":\"\",\"senddatacardstatus\":\"no\",\"hasdatacardstatus\":\"no\",\"status_indicator\":\"yes\",\"sendwallcabinet\":\"no\",\"haswallcabinet\":\"yes\",\"unit_unavailable\":\"no\",\"physicallocation\":\"Main Entrance\",\"error_with_unit\":\"no\",\"request_doe_send_spare_battery\":\"no\",\"error_info\":\"\"}]}<br>
+    [schoolname] => Pre-K Center at 83-30 Kew Gardens Road<br>
+    [uploader] => bethanfatim@gmail.com<br>
+    [date] => 20160418<br>
+    [time] => 110542<br>
+    [name] => Dawn O Rouke<br>
+    [esr_name] => Bethany Saduddin Singh<br>
+<br>

@@ -1,0 +1,14 @@
+<?
+session_start();
+$nologin = "true";
+if( $username == "sarahg@emergencyskills.com" && password == "doctor" )
+{
+$loggedin = "yeS";
+session_register( 'loggedin' );
+Header( "Location: index.php" );
+}
+else
+{
+Header( "Location: http://esi.vireo.org/adminmain.php?hi" );
+}
+?>

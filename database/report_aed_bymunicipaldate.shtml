@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Responder Report</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body bgcolor="#ffffff">
+
+<span class="copy">
+<strong>Nationwide AEDs for Goldman, Sachs & Co.</strong><br>
+Sorted by Municipal Filing Expiration Date<br><br>
+<table cellpadding="3" cellspacing="0" border="1" width="100%">
+	<tr>
+		<td valign="top"><span class="copy"><strong>Municipal Filing<br>
+		Exp. Date</strong></span></td>	
+		<td valign="top"><span class="copy"><strong>AED Serial Number</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Model/Type</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Company Location</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Floor</strong></span></td>
+		<td valign="top"><span class="copy"><strong>AED Location</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Pads A<br>Exp. Date</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Pads B<br>Exp. Date</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Spare Battery Intall Before Date</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Battery<br>Intallation Date</strong></span></td>
+		<td valign="top"><span class="copy"><strong>Medical Director</strong></span></td>		
+			
+
+	</tr>
+
+	
+	
+	<tr>
+		<td valign="top"><span class="copy">02/18/2002</span></td>	
+		<td valign="top"><span class="copy"><a href="view_serial.shtml">AED4098723411</a></span></td>
+		<td valign="top"><span class="copy">FR2</span></td>
+		<td valign="top"><span class="copy"><a href="view_company.shtml">657 Peach Road</a></span></td>
+		<td valign="top"><span class="copy">1st Floor</span></td>
+		<td valign="top"><span class="copy">Service Desk</span></td>
+		<td valign="top"><span class="copy">09/12/2005</span></td>
+		<td valign="top"><span class="copy">12/13/2005</span></td>
+		<td valign="top"><span class="copy">02/14/2004</span></td>
+		<td valign="top"><span class="copy">10/19/2005</span></td>
+		<td valign="top"><span class="copy">Dr. Janet Parker</span></td>		
+			
+		
+	</tr>
+	
+	<tr>
+		<td valign="top"><span class="copy">07/13/2002</span></td>	
+		<td valign="top"><span class="copy"><a href="view_serial.shtml">AED4098723410</a></span></td>
+		<td valign="top"><span class="copy">Forerunner</span></td>
+		<td valign="top"><span class="copy"><a href="view_company.shtml">123 Mockingbird Lane</a></span></td>
+		<td valign="top"><span class="copy">10th Floor</span></td>
+		<td valign="top"><span class="copy">Kitchen Wall</span></td>
+		<td valign="top"><span class="copy">07/17/2004</span></td>
+		<td valign="top"><span class="copy">12/08/2004</span></td>
+		<td valign="top"><span class="copy">11/24/2005</span></td>
+		<td valign="top"><span class="copy">09/06/2004</span></td>
+		<td valign="top"><span class="copy">Dr. Jim Delaney</span></td>		
+			
+		
+	</tr>
+	<tr>
+		<td valign="top"><span class="copy">01/16/2003</span></td>	
+		<td valign="top"><span class="copy"><a href="view_serial.shtml">AED4098723409</a></span></td>
+		<td valign="top"><span class="copy">FR2</span></td>
+		<td valign="top"><span class="copy"><a href="view_company.shtml">85 Broadstreet</a></span></td>
+		<td valign="top"><span class="copy">5th Floor</span></td>
+		<td valign="top"><span class="copy">Utility Closet</span></td>
+		<td valign="top"><span class="copy">03/04/2004</span></td>
+		<td valign="top"><span class="copy">12/01/2004</span></td>
+		<td valign="top"><span class="copy">05/14/2005</span></td>
+		<td valign="top"><span class="copy">06/09/2004</span></td>
+		<td valign="top"><span class="copy">Dr. Phil McGraw</span></td>		
+			
+		
+	</tr>	
+
+</table>
+
+
+</span>
+</body>
+</html>

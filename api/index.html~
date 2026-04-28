@@ -1,0 +1,15 @@
+<h3>Instructions:</h3>
+<br>
+Call: http://doe.emergencyskills.com/api/api.php
+Method: <b>POST</b><br>
+Returns: JSON<br>
+<br><br>
+
+<h6>Method: <b>doLogin</b></h6><br>
+<br>
+Arguments: <br>
+&nbsp; username (varchar)<br>
+&nbsp; password (varchar)<br>
+<br>
+Returns: <br>
+

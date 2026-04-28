@@ -1,0 +1,24 @@
+name: Deploy via SSH
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: sanjoydeyreju.com
+        username: sanjnxpu  # Your main cPanel login
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        passphrase: ${{ secrets.SSH_PASSWORD }}
+        port: 21098 # Standard cPanel SSH port (check with your host)
+        script: |
+          cd /home/sanjnxpu/doe
+          git pull origin main

@@ -1,0 +1,4 @@
+[04-Mar-2026 03:57:51 America/Chicago] PHP Fatal error:  Uncaught Error: Class "PHPUnit_Framework_TestCase" not found in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/tests/BarcodeTest.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/tests/BarcodeTest.php on line 3

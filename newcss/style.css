@@ -1,0 +1,109 @@
+* {margin: 0; padding:0; }
+body {background-color: #efefef; font-family:arial; font-size: 12px; line-height: 18px; color:#333333;}
+th, td {font-family:arial; font-size: 12px; line-height: 18px; color:#666666;}
+a, a:hover, a:link, a:visited, a:active {color:#5a179e; text-decoration: underline; }
+.chosen { font-weight: bold }
+.padding4 { padding: 4px } 
+
+.smallinput {font-size: 10px; }
+
+#header-wrapper {width:100%; background-color: #ffffff; background-image:url('../newimages/bg-header.jpg'); background-repeat: repeat-x; height: 73px;}
+#header-container {width: 1000px; height: 100px; padding: 10px 0 0 10px; background-color: #5a179e; color: #ffffff }
+#header-container b { color: #ffffff }
+.subtitle {font-size: 16px; color:#5a179e; font-weight: bold;}
+
+#logo {float:left; background-color: #5a179e }
+#search-box {float:right; }
+.textbox {background-image:url(../newimages/bg-textbox.jpg); background-repeat:repeat-x; color: #999999; font-family: arial; font-size: 12px; border: 1px solid #9ebad5; height: 23px; padding:3px; }
+	
+.button-submit  {color: #ffffff; font-weight: bold; background-color:#5a179e; border-width:1px; border-style:solid; border-color:#999999; font-size:11px; -moz-border-radius: 5px; -webkit-border-radius: 5px; height: 23px; width: 80px;}
+
+.copysm  {font-size: 11px;}
+
+#nav-wrapper  {position: relative; width:1010px; height: 39px; background-color: #5a179e;  }
+#nav-container {float: left; height: 39px; position: relative;}
+
+ul.nav-main  {float: left; margin-left: 10px; list-style-type: none; height: 39px;}
+ul.nav-main li  {display: inline; float: left; height: 18px; padding: 15px 5px 6px;}
+ul.nav-main li a, ul.nav-main li a:hover, ul.nav-main li a:visited, ul.nav-main li a:active {padding: 10px; font-size: 13px; font-weight: bold; text-decoration: none; color: #ffffff;}
+
+/* body#p-corporate ul.nav-main li.corporate,
+body#p-prospects ul.nav-main li.prospects,
+body#p-training ul.nav-main li.training,
+body#p-doe ul.nav-main li.doe {background-image: url('../newimages/bg-nav-active.jpg');}
+*/
+
+body#p-corporate ul.nav-main li.corporate,
+body#p-prospects ul.nav-main li.prospects,
+body#p-training ul.nav-main li.training,
+body#p-dfta ul.nav-main li.dfta,
+body#p-doe ul.nav-main li.doe {background-color: red;}
+
+.table3, .table3 th, .table3 td  {padding: 4px;}
+
+#content {width: 1000px; clear: both;}
+#col-left {float: left; margin: 10px; width: 200px; background-color: #ffffff; border: solid 1px #999999; padding: 10px; height:auto !important; min-height: 900px; height:900px;}
+
+
+ul.subnav  {list-style-type: none; font-size: 11px;}
+.subnav-title  {padding: 10px 0; border-top: 1px solid #dfdede; color: #5a179e; font-size: 13px; font-weight:bold;}
+.subnav-last  {padding-bottom: 10px;}
+ul.subnav li a, ul.subnav li a:active, ul.subnav li a:visited  {font-family:arial; font-size: 11px; color:#666666; text-decoration: none;}
+ul.subnav li a:hover {font-family:arial; font-size: 11px; text-decoration: underline;}
+
+#main-content  {float: left; width: 730px; margin: 10px 0 10px 0; background-color: #ffffff; border: solid 1px #999999; padding: 10px;  height:auto !important; min-height: 900px; height:900px; }
+#content-center  {float: left; width:500px;}
+#content-center2  {float: left; width:730px;}
+#content-right  {float: right; width: 200px;}
+
+.box-header {background-color: #5a179e; height: 25px; padding: 7px;}
+.box-title {color: #FFFFFF; float: left; font-size: 20px; line-height: 22px; font-weight: bold; margin-top: 3px;}
+.box-title-right  {margin-top: 6px; float: right; color:#ffffff;}
+.box-subhead {padding: 12px 0 7px 0; height: 15px; border-bottom: 1px solid #cccccc;}
+.box-subtitle  {float: left; color:#5a179e; font-size: 15px; font-weight: bold;}
+.box-subtitle-right {float: right; color:#ffffff;}
+
+.table2, .table2 th, .table2 td  {border: 1px solid #cccccc; text-align: center; padding:6px;}
+.table2  {border-collapse: collapse; width:100%;}
+.table2 th  {background-color: #e9e6e6;}
+.table2 th.left  {background-color: #e9e6e6; text-align: left;}
+.table2 td.left {text-align: left;}
+
+
+.tabledrill, .tabledrill th, .tabledrill td  {border: 1px solid #cccccc; text-align: center; padding:6px;}
+.tabledrill  {border-collapse: collapse; width:100%;}
+.tabledrill th  {}
+.tabledrill th.left  {text-align: left;}
+.tabledrill td.left {text-align: left;}
+
+
+.page-head  {float: left; font-size: 20px; line-height: 30px; font-weight: bold; color: #5a179e; margin-top: 10px;}
+.page-subhead {font-size: 15px; font-weight: bold; color: #5a179e; text-transform:uppercase;}
+
+
+#footer {clear: both; height: 100px; background-color: #5a179e; text-align: center; padding: 10px; font-size:11px; color: #ffffff;}
+.white { 
+	color: #FFFFFF;
+}
+
+#answer1 { 
+		 z-index:1;
+		 position: fixed;
+		 display:none;
+		 height:300px;
+		 width:200px;
+		 background:#cccccc;	
+		 top:30px;  
+		 left:250px;
+		 padding: 4px;
+}
+table.classdetailtable { 
+margin-top: 4px; 
+padding: 4px; 
+border: 1px solid #AAAAAA;
+min-width: 300px;
+
+}
+.highlight {
+    background-color: yellow;
+}

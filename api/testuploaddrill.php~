@@ -1,0 +1,31 @@
+<?
+
+$apikey = "daMEs26rufAqasw2pUYU";
+$post = array( 
+    'method' => "uploadDrill", 
+    'apikey' => $apikey, 
+    "data"=> "{\"id\":\"2389\",\"address\":\"Brooklyn\",\"state\":\"NY\",\"zip\":\"11215\",\"phone\":\"718-832-4200\",\"principal\":\"Oneatha Swinton,\",\"principalemail\":\"oswinton@schools.nyc.gov\",\"contact\":\"Jason Otto\",\"contactemail\":\"\",\"contactphone\":\"718-832-4333\",\"code\":\"15-K-462\",\"drillid\":\"36378\",\"status\":\"success\",\"drillinfo\":{\"stepsdata\":[{\"stepnumber\":\"1\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"2\",\"points\":\"1\",\"time\":\"0:02\",\"comments\":\"\"},{\"stepnumber\":\"3\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"4\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"5\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"6\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"7\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"8\",\"points\":\"2\",\"time\":\"\",\"comments\":\"ccvvh\"},{\"stepnumber\":\"9\",\"points\":\"0\",\"time\":\"0:03\",\"comments\":\"\"},{\"stepnumber\":\"10\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"11\",\"points\":\"0\",\"time\":\"\",\"comments\":\"cdfghgf\"},{\"stepnumber\":\"12\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"13\",\"points\":\"3\",\"time\":\"\",\"comments\":\"xdd\"},{\"stepnumber\":\"14\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"}],\"totalpoints\":\"12\",\"totaltime\":\"0:27\",\"number_of_respondents\":\"1\",\"number_of_aed_responding\":\"2\",\"participating_responders_name\":\"ssss\",\"participating_responders_school\":\"qqwqqq\"}}",
+//    "data" => "{\"id\":\"988\",\"address\":\"Brooklyn\",\"state\":\"New York\",\"zip\":\"11215\",\"phone\":\"718-624-5271\",\"principal\":\"Arthur Mattia, I.A.\",\"principalemail\":\"amattia@schools.nyc.gov\",\"contact\":\"Arthur Mattia\",\"contactemail\":\"amattia@schools.nyc.gov\",\"contactphone\":\"718-624-5271\",\"code\":\"75-K-372\",\"drillid\":\"36129\",\"status\":\"success\",\"drillinfo\":{\"stepsdata\":[{\"stepnumber\":\"1\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"2\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"3\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"4\",\"points\":\"1\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"5\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"6\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"7\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"8\",\"points\":\"1\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"9\",\"points\":\"1\",\"time\":\"0:01\",\"comments\":\"\"},{\"stepnumber\":\"10\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"11\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"12\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"13\",\"points\":\"0\",\"time\":\"\",\"comments\":\"\"},{\"stepnumber\":\"14\",\"points\":\"2\",\"time\":\"\",\"comments\":\"\"}],\"totalpoints\":\"13\",\"totaltime\":\"0:11\",\"number_of_respondents\":\"2\",\"number_of_aed_responding\":\"2\",\"participating_responders_name\":\"\",\"participating_responders_school\":\"\"}}",
+    "date" => "20160128",
+    "time" => "142432",
+    "name" => "ssss",
+               );
+$newfile = "/tmp/" . time() . ".png";
+shell_exec( "cp '../signatures/20160128_142512_0.9850373465743341.png' $newfile" );
+$file_name_with_full_path = realpath($newfile);
+$post["media_file"] = "@". $file_name_with_full_path;
+
+$ch = curl_init('http://doe.emergencyskills.com/api/api.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+$response = curl_exec($ch);
+curl_close($ch);
+$value = json_decode( $response );
+
+echo( "<font color='red'>Status: " . $value->status . "<br>" );
+echo( "Error Message: " . $value->error_message . "<br>" );
+echo( "User ID: " . $value->userid . "<br>" );
+echo( "Attributes: " . print_r( $value->attrs, true ) . "<br></font>" );
+
+?>

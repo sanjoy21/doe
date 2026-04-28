@@ -1,0 +1,2 @@
+[06-Sep-2024 14:48:18 UTC] PHP Warning:  Module 'mcrypt' already loaded in Unknown on line 0
+[04-Mar-2026 03:57:46 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home/emergencyskills/live.emergencyskills.com/vendor/picqer/php-barcode-generator/src/BarcodeGenerator.php on line 293

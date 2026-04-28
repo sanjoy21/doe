@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Emergency Skills Inc. -- Optimize Your Response Time</title>
+
+<META NAME="Keywords" CONTENT="CPR, CPR Classes, AED, AED training, AED Sales, Defib Sales, Defibrillator, Defibrillators, Defibrillation, Defib, Automatic External Defibrillator, Automatic External Defibrillator, Emergency Skills, Emergency Services, New York, New York City, NYC, NY, emergency, emergencies, urgent, 911, help, cardiac arrest, heart attack, stroke, public defibrillation, public access defibrillator, defib vendor, defib sales, defib training, Cardio Pulmonary Recussitation, Recussitate, Heimlich, Heimlich manuever, choking, pocket mask, ventilation, rescue breathing, manikin, manakin">
+
+<META NAME="Description" CONTENT="EMERGENCY SKILLS, Inc., a corporate safety training company, provides AED sales and CPR training the New York City metro area.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!---------- JavaScript begins...
+function ChangeImage (ImageName,FileName) {
+	document[ImageName].src = FileName;
+}
+// JavaScript ends ---------->
+</SCRIPT>	
+
+
+<script language="JavaScript">
+<!-- hide from JavaScript-challenged browsers
+function openWindow1() {  popupWin = window.open('downloads/brochure.shtml', 'figure1', 'scrollbars,resizable,width=700,height=550')
+}
+// done hiding -->
+</script>
+
+<!--<A HREF="javascript:openWindow29();">-->
+
+<STYLE TYPE="text/css">
+<!--
+BODY {margin:0}
+-->
+</STYLE>	
+
+
+<STYLE TYPE="text/css">
+a:link { color: #330099; text-decoration: none }
+a:active { color: #330099; text-decoration: none }
+a:visited { color: #330099; text-decoration: none }
+a:hover { color: #330099; text-decoration: none }
+</STYLE> 
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body bgcolor="#000066" marginwidth="0" marginheight="0" link="blue" visited="blue">
+
+<br>
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" width="700">
+	<tr>
+		<td colspan="4" valign="top"><img src="../images/topbanner.jpg" width="700"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" background="../images/topnav_background.jpg" width="700" height="24"><div align="right">
+			
+			<!--#include file="../ssi/topnav.shtml" -->
+			
+			
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+		
+		<!--#include file="../ssi/leftnav1.shtml" -->
+		
+		
+		</td>
+		<td valign="top" width="5"><img src="../images/dotclear.gif" width="10"></td>
+		<td valign="top" width="476">
+
+		<span class="copy">
+		<br>
+		
+		<table cellpadding="5" cellspacing="1" border="0" width="465">
+			<tr>
+				<td valign="top" align="right" bgcolor="#ffffff" colspan="2"><span class="small"><strong><a href="admin_main.shtml">&laquo; Back to Admin Main</a></strong></span></td>				
+			</tr>
+		</table>
+		<br>
+		<table cellpadding="8" cellspacing="1" border="0" width="465">	
+			<tr>
+				<td valign="top" bgcolor="#1C0792" colspan="2">
+					<table bgcolor="#1C0792" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><span class="white"><strong>Trained Responders</strong></span></td><td valign="top" bgcolor="#1C0792" align="right"><a href="input_responder.shtml"><span class="white">[Add Reponder]</span></a></td></tr></table>
+				</td>			
+			</tr>
+			
+			<tr>
+				<td valign="top" bgcolor="#E2DFDF">
+				
+				<span class="copy">The following persons are responders at<br><br><strong>Goldman, Sachs & Co<br>85 Broad Street, New York NY</strong><br><br>Click on a name to view responder details:</span><br><br>
+					<div align="center">
+					<table width="95%" border="0">
+						<tr>
+							<td><span class="copy"><strong>
+				<a href="view_responder.shtml">Sue Brown</a><br>
+				<a href="view_responder.shtml">Don Wilson</a><br>
+				<a href="view_responder.shtml">Leslie Towns</a><br>
+				<a href="view_responder.shtml">Carl Peters</a>
+				</span></strong>
+				</td>
+				
+				<td valign="top"><strong><span class="copy">
+				<a href="view_responder.shtml">Jim Smith</a><br>
+				<a href="view_responder.shtml">Carol Lipinski</a><br>
+				<a href="view_responder.shtml">Donna Wells</a><br>
+				<a href="view_responder.shtml">Dean Nelson</a>
+				</span></strong>
+				</td>
+				
+				<td valign="top"><strong><span class="copy">
+				<a href="view_responder.shtml">Bob Brewer</a><br>
+				<a href="view_responder.shtml">Cindy Campbell</a><br>
+				<a href="view_responder.shtml">Anna Rhodes</a>
+				</span></strong>
+							</td>					
+						</tr>
+					</table></div><br>
+				
+				</td>
+			</tr>
+		</table>
+				
+		
+		
+				<br><br>				
+				
+				</td>
+			</tr>
+		</table>
+	
+	
+		<br><br>
+		<!--end center content-->
+		
+		<!--#include file="../ssi/footer.shtml" -->
+
+		<!--end footer-->
+		
+		</span>
+		</td>
+		<td valign="top" width="15"><img src="../images/dotclear.gif" width="10"></td>
+	</tr>
+</table>
+<br><br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<? 
+$newid = db_query_insert_id( "insert into appuploads ( dateuploaded, type, uploader, dateinupload,esi_repname, schoolname ) values ( now(), 'drill', '". mysql_escape_string( $_POST["uploader"] ). "', '$signdate', '". mysql_escape_string( $_POST["esr_name"] ). "', '". mysql_escape_string( $_POST["schoolname"] ). "' )" );
+
+
+foreach( $data as $key=>$value )
+{
+    if( $key == "drillinfo" )
+    {
+        foreach( $value as $particularname=>$particulardata )
+        {
+            if( $particularname == "stepsdata" )
+            {
+                foreach( $particulardata as $step )
+                {
+                    $checked = (string)$step->ischecked;
+                    $checked = $checked =="yes"?1:0;
+                    db_query( "insert into drilluploaddata( uploadid,stepnumber, points,time, ischecked,comments ) values ( '$newid', '" . mysql_escape_string( $step->stepnumber ). "', '" . mysql_escape_string( $step->points ). "', '" . mysql_escape_string( $step->time ). "', '" . mysql_escape_string( $checked ). "', '" . mysql_escape_string( $step->comments ). "' )" );
+                    
+                }
+            }
+            db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', '$particularname', '$particulardata' )" );
+        }
+    }
+    else
+    {
+        db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', '$key', '$value' )" );
+    }
+}
+
+// signature
+$signname = $newid . "_" . $_FILES["media_file"]["name"];
+move_uploaded_file( $_FILES["media_file"]["tmp_name"], "../signatures/" . $signname );
+db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', 'media_file', '".mysql_escape_string( $signname )."' )" );
+
+
+// esi signature
+$signname = $newid . "_esr_" . $_FILES["media_file_esr"]["name"];
+move_uploaded_file( $_FILES["media_file_esr"]["tmp_name"], "../signatures/" . $signname );
+db_query( "insert into appuploaddata( uploadid,name, value ) values ( '$newid', 'media_file_esr', '".mysql_escape_string( $signname )."' )" );
+
+
+?>

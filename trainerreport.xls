@@ -1,0 +1,26 @@
+<table>
+<tr>
+<td>Instructor Name</td>
+<td>Host School Name</td>
+<td>Host School Address</td>
+<td>Course ID</td>
+<td>Course Type</td>
+<td>Course Date</td>
+<td>Course Start Time</td>
+</tr>
+<? 
+foreach( $rep as $class )
+{
+?>
+	<tr>
+		<td><?=getUserName( $class[trainerid] )?></td>
+		<td><?=getCompanyName( $class[companyid] )?></td>
+		<td><?=getCompanyAddress( $class[companyid] )?></td>
+		<td><?=$class[id]?></td>
+		<td><?=$class_names[$class[code]]?></td>
+		<td><?=date( "Y-m-d", strtotime( $class[startdate] ) )?></td>
+		<td><?=date( "H:i", strtotime( $class[startdate] ) )?></td>
+	</tr>
+<?
+}
+?>
